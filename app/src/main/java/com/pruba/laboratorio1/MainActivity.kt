@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: ArticleAdapter
     private val articleList = mutableListOf<Articles>()
-    lateinit var piaz:String
-    lateinit var a: AutoCompleteTextView
+    var piaz:String = "us"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +46,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             val selectedItem = parent.getItemAtPosition(position).toString().toLowerCase()
             // Display the clicked item using toast
             searchNewCon(selectedItem)
+            piaz = selectedItem
             Toast.makeText(applicationContext,"Selected : $selectedItem",Toast.LENGTH_SHORT).show()
         }
 
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             val call = api.getService()?.getNewsByCategory(
                     country,
                     "general",
-                    "4b94054dbc6b4b3b9e50d8f62cde4f6c"
+                    "96d1a256fdf14667964b77f96059b578"
             )
             val news: NewsResponse? = call?.body()
 
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         CoroutineScope(Dispatchers.IO).launch {
 
             val call = api.getService()?.getNewsByCategory(
-                "us",
+                piaz,
                 category,
                 "4b94054dbc6b4b3b9e50d8f62cde4f6c"
             )

@@ -49,7 +49,7 @@
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
             android:inputType="none"
-            android:text="Us" />
+            android:text="US" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

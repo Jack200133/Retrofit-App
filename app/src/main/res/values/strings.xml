@@ -2,19 +2,59 @@
     <string name="app_name">Laboratorio 1</string>
 
     <string-array name="contris">
+        <item>AE</item>
         <item>AR</item>
+        <item>AT</item>
+        <item>AU</item>
+        <item>BE</item>
+        <item>BG</item>
+        <item>BR</item>
+        <item>CA</item>
+        <item>CH</item>
+        <item>CN</item>
+        <item>CO</item>
+        <item>CZ</item>
         <item>DE</item>
-        <item>EN</item>
+        <item>EG</item>
         <item>FR</item>
-        <item>HE</item>
+        <item>GB</item>
+        <item>GR</item>
+        <item>HK</item>
+        <item>HU</item>
+        <item>ID</item>
+        <item>IE</item>
+        <item>IL</item>
+        <item>IN</item>
         <item>IT</item>
+        <item>JP</item>
+        <item>KR</item>
+        <item>LT</item>
+        <item>LV</item>
+        <item>MA</item>
+        <item>MX</item>
+        <item>MY</item>
+        <item>NG</item>
         <item>NL</item>
         <item>NO</item>
+        <item>PH</item>
+        <item>PL</item>
         <item>PT</item>
+        <item>RO</item>
+        <item>RS</item>
         <item>RU</item>
+        <item>SA</item>
         <item>SE</item>
-        <item>UD</item>
-        <item>ZH</item>
+        <item>SG</item>
+        <item>SG</item>
+        <item>SI</item>
+        <item>SK</item>
+        <item>TH</item>
+        <item>TR</item>
+        <item>TW</item>
+        <item>UA</item>
+        <item>US</item>
+        <item>VE</item>
+        <item>ZA</item>
 
     </string-array>
 </resources>
