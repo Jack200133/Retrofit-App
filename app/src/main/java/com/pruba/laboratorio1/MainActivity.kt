@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     private lateinit var adapter: ArticleAdapter
     private val articleList = mutableListOf<Articles>()
     var piaz:String = "us"
+    var categ:String = "general"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,7 +61,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
             val call = api.getService()?.getNewsByCategory(
                     country,
-                    "general",
+                    categ,
                     "96d1a256fdf14667964b77f96059b578"
             )
             val news: NewsResponse? = call?.body()
@@ -101,7 +102,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             val call = api.getService()?.getNewsByCategory(
                 piaz,
                 category,
-                "4b94054dbc6b4b3b9e50d8f62cde4f6c"
+                "96d1a256fdf14667964b77f96059b578"
             )
             val news: NewsResponse? = call?.body()
 
@@ -142,6 +143,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     override fun onQueryTextSubmit(query: String?): Boolean {
         if(!query.isNullOrEmpty()){
             searchNew(query.toLowerCase(Locale.ROOT))
+            categ = query.toLowerCase(Locale.ROOT)
         }
         return true
     }
